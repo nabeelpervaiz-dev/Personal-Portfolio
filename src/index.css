@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #efeee9;
+  --font-hn: "Helvetica Neue ME", Helvetica, Arial, sans-serif;
+  --font-sans: "Helvetica Neue ME", Helvetica, Arial, sans-serif;
+  --font-serif: "Helvetica Neue ME", Helvetica, Arial, sans-serif;
+}
+
+@layer base {
+  body {
+    font-family: "Helvetica Neue ME", Helvetica, Arial, sans-serif;
+    background-color: #050505;
+    color: #efeee9;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(4vh) scale(1.03);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes lineScale {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes marqueeScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.anim-fade-in {
+  animation: fadeIn 1.2s ease-out both;
+}
+
+.anim-rise-in {
+  animation: riseIn 1.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.anim-fade-up {
+  animation: fadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.anim-line {
+  transform-origin: left;
+  animation: lineScale 1.1s cubic-bezier(0.76, 0, 0.24, 1) both;
+}
+
+.marquee {
+  animation: marqueeScroll 30s linear infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-fade-in,
+  .anim-rise-in,
+  .anim-fade-up,
+  .anim-line {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+  }
+  .marquee {
+    animation: none !important;
+    transform: none !important;
+  }
+}
