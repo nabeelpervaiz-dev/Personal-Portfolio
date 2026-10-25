@@ -32,11 +32,6 @@ export default function Skills() {
       description:
         'Crafting semantic, accessible (WCAG AA), and search-engine optimized markup that forms robust document outlines.',
       tags: ['HTML5', 'Semantic Tags', 'ARIA', 'SEO & OpenGraph', 'Web Standards'],
-      iconSvg: (
-        <svg viewBox="0 0 24 24" className="w-8 h-8 fill-current text-cream" aria-hidden="true">
-          <path d="M12 2L3 5.5v13L12 22l9-3.5v-13L12 2zm6.2 5.2l-.7 8.3-5.5 2.1-5.5-2.1-.7-8.3h12.4zm-2.2 2.5H8.3l.2 2.3h5.2l-.3 3.2-1.4.4-1.4-.4-.1-1.3H9.2l.2 2.4 2.6.8 2.6-.8.5-5.3H9.8l-.1-1.3h6.5l-.2 0z" />
-        </svg>
-      ),
     },
     {
       id: 'css',
@@ -46,11 +41,7 @@ export default function Skills() {
       description:
         'Modern layout orchestration with Flexbox and CSS Grid, custom properties, responsive design, animations, and typography.',
       tags: ['CSS3', 'Flexbox & Grid', 'Custom Properties', 'Responsive Design', 'Keyframes'],
-      iconSvg: (
-        <svg viewBox="0 0 24 24" className="w-8 h-8 fill-current text-cream" aria-hidden="true">
-          <path d="M12 2L3 5.5v13L12 22l9-3.5v-13L12 2zm6.2 5.2l-.7 8.3-5.5 2.1-5.5-2.1-.7-8.3h12.4zm-2.2 2.5H8.3l.2 2.3h5.2l-.3 3.2-1.4.4-1.4-.4-.1-1.3H9.2l.2 2.4 2.6.8 2.6-.8.5-5.3H8.5l-.2-2.3h7.9l-.2 2.3z" />
-        </svg>
-      ),
+
     },
     {
       id: 'js',
@@ -60,11 +51,6 @@ export default function Skills() {
       description:
         'Deep understanding of ES6+, DOM manipulation, asynchronous programming (Promises, async/await), and event loop mechanics.',
       tags: ['ES6+', 'Async / Await', 'DOM API', 'Data Structures', 'Modules'],
-      iconSvg: (
-        <svg viewBox="0 0 24 24" className="w-8 h-8 fill-current text-cream" aria-hidden="true">
-          <path d="M3 3h18v18H3V3zm13.7 13.9c.7 0 1.3-.3 1.7-.8.3-.4.4-.9.4-1.6h2c0 1.2-.4 2.2-1.2 2.9-.8.7-1.8 1.1-3 1.1-1.2 0-2.2-.4-2.9-1.2-.7-.8-1.1-1.9-1.1-3.3 0-1.5.4-2.6 1.2-3.4.8-.8 1.8-1.2 3.1-1.2 1.1 0 2 .3 2.7 1 .7.6 1.1 1.5 1.1 2.6h-2c0-.6-.2-1.1-.5-1.4-.4-.3-.9-.5-1.5-.5-.7 0-1.3.3-1.7.8-.4.5-.6 1.3-.6 2.3 0 1.1.2 1.9.6 2.4.4.5 1 .7 1.8.7zm-6.8 1.5H8.2c-.4 0-.7-.1-.9-.3-.2-.2-.3-.5-.3-.9V12h1.8v4.9c0 .2 0 .3.1.4.1.1.2.1.4.1h.6v1.9z" />
-        </svg>
-      ),
     },
     {
       id: 'react',
@@ -74,47 +60,6 @@ export default function Skills() {
       description:
         'Building high-performance component systems, custom hooks, predictable state management, and seamless SPA architectures.',
       tags: ['React 19', 'Custom Hooks', 'Virtual DOM', 'Component Architecture', 'Performance'],
-      iconSvg: (
-        <svg viewBox="0 0 24 24" className="w-8 h-8 fill-current text-cream" aria-hidden="true">
-          <ellipse cx="12" cy="12" rx="3" ry="3" />
-          <path
-            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.2"
-          />
-          <ellipse
-            cx="12"
-            cy="12"
-            rx="9"
-            ry="3.5"
-            transform="rotate(30 12 12)"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.2"
-          />
-          <ellipse
-            cx="12"
-            cy="12"
-            rx="9"
-            ry="3.5"
-            transform="rotate(90 12 12)"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.2"
-          />
-          <ellipse
-            cx="12"
-            cy="12"
-            rx="9"
-            ry="3.5"
-            transform="rotate(150 12 12)"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.2"
-          />
-        </svg>
-      ),
     },
     {
       id: 'tailwind',
@@ -124,12 +69,7 @@ export default function Skills() {
       description:
         'Rapid, consistent design system implementation with Tailwind v4, custom theme tokens, modern responsive prefixes, and transitions.',
       tags: ['Tailwind v4', 'Design Tokens', 'Dark Theme', 'Responsive Grid', 'JIT Engine'],
-      iconSvg: (
-        <svg viewBox="0 0 24 24" className="w-8 h-8 fill-current text-cream" aria-hidden="true">
-          <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.336 6.182 14.975 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.336 13.382 8.975 12 6.001 12z" />
-        </svg>
-      ),
-      
+     
     },
   ];
 
