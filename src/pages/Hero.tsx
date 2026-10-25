@@ -118,7 +118,7 @@ export default function Hero() {
       >
         <div className="relative h-[87vh] sm:h-[80vh] w-auto max-w-[96vw] sm:max-w-2xl flex items-end justify-center">
           <img
-            src="/assets/aistudio/removed_bg_image-Photoroom_16e9b35b.png"
+          src={`${import.meta.env.BASE_URL}assets/aistudio/removed_bg_image-Photoroom_16e9b35b.png`}
             alt="Nabeel Pervaiz"
             className="h-full w-auto object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,0,0,0.9)]"
           />
