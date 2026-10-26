@@ -32,12 +32,17 @@ export default function AboutMe() {
   const socialsRef = useRef<HTMLDivElement>(null);
   const lineRef = useRef<HTMLDivElement>(null);
 
-  const userEmail = 'nabeelpervaiz.dev@gmail.com';
-  // const mailtoLink = `mailto:${userEmail}?subject=Let%27s%20Connect`;
+  
+const userEmail = "nabeelpervaiz.dev@gmail.com";
+const subject = encodeURIComponent("Let's Connect");
 
-  const mailtoLink = `mailto:${userEmail}?subject=${encodeURIComponent(
-  "Let's Connect"
-)}`;
+const isMobile = /Android|iPhone|iPad|iPod/i.test(
+  navigator.userAgent
+);
+
+const mailtoLink = `mailto:${userEmail}?subject=${subject}`;
+const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${userEmail}&su=${subject}`;
+
 
   useEffect(() => {
     const prefersReducedMotion =
@@ -158,8 +163,9 @@ export default function AboutMe() {
           <div ref={photoRef} className="lg:col-span-5">
             <div className="relative group overflow-hidden rounded-2xl border border-cream/20 bg-[#121212] aspect-[3/4] max-w-md mx-auto lg:max-w-none shadow-2xl">
               <img
-                src="/assets/aistudio/removed_bg_image-Photoroom_16e9b35b.png"
-                alt="Nabeel Pervaiz"
+             src={`${import.meta.env.BASE_URL}assets/aistudio/removed_bg_image-Photoroom_16e9b35b.png`}
+            alt="Nabeel Pervaiz"
+                
                 className="h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
               />
               {/* Subtle gradient vignette */}
@@ -200,22 +206,25 @@ export default function AboutMe() {
             {/* Prominent "Connect With Me" button */}
             
 <div className="pt-2">
-  <a
-    href="https://mail.google.com/mail/?view=cm&fs=1&to=nabeelpervaiz.dev@gmail.com&su=Let's%20Connect"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="connect-btn group relative inline-flex items-center justify-between gap-6 px-8 py-4 bg-cream text-[#050505] rounded-full font-hn font-medium text-base sm:text-lg tracking-wide transition-all duration-300 hover:bg-white hover:shadow-[0_0_30px_rgba(239,238,233,0.3)] hover:scale-[1.02] active:scale-[0.98]"
-  >
-    <span className="flex items-center gap-3">
-      <Mail size={20} className="text-[#050505]" />
-      <span>Connect With Me</span>
-    </span>
+  
+  
+<a
+  href={isMobile ? mailtoLink : gmailLink}
+  target={isMobile ? undefined : "_blank"}
+  rel="noopener noreferrer"
+  className="connect-btn group relative inline-flex items-center justify-between gap-6 px-8 py-4 bg-cream text-[#050505] rounded-full font-hn font-medium text-base sm:text-lg tracking-wide transition-all duration-300 hover:bg-white hover:shadow-[0_0_30px_rgba(239,238,233,0.3)] hover:scale-[1.02] active:scale-[0.98]"
+>
+  <span className="flex items-center gap-3">
+    <Mail size={20} className="text-[#050505]" />
+    <span>Connect With Me</span>
+  </span>
 
-    <ArrowUpRight
-      size={20}
-      className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-    />
-  </a>
+  <ArrowUpRight
+    size={20}
+    className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+  />
+</a>
+
 
   <p className="text-xs text-cream/40 mt-2.5 font-mono">
     Opens Gmail to compose an email
