@@ -7,6 +7,7 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ExternalLink, Github, CheckCircle2, Search, Utensils, Users, ListTodo, ShieldCheck } from 'lucide-react';
 import Footer from '../components/Footer.tsx';
+import { img } from 'motion/react-client';
 
 interface Project {
   title: string;
@@ -16,7 +17,8 @@ interface Project {
   liveDemoUrl?: string;
   githubUrl?: string;
   featuredBadge?: string;
-  previewUi: React.ReactNode;
+  img:string;
+  // previewUi: React.ReactNode;
 }
 
 export default function Projects() {
@@ -25,140 +27,88 @@ export default function Projects() {
   const cardsRef = useRef<HTMLDivElement>(null);
   const lineRef = useRef<HTMLDivElement>(null);
 
+
+
   const projects: Project[] = [
     {
       title: 'Employee Task Management System',
       category: 'React Application',
       description:
-        'A React-based Employee Task Management System built to practice and strengthen my React concepts. The project focuses on component-based architecture, props, state management, Context API, and task assignment workflows.',
+        'A React-based Employee Task Management System built to practice and strengthen my React concepts. The project focuses on    component-based architecture, props, state management, Context API, and task assignment workflows. Admin: admin1@me.com  & Employee:qaiser@me.com or diya@me.com and password is (123) for all using LocalStorage ',
       tags: ['React', 'Context API', 'State Management', 'Props Architecture', 'Tailwind CSS'],
       liveDemoUrl: 'https://nabeelpervaiz-dev.github.io/Employee-Management-Project/',
       githubUrl: 'https://github.com/nabeelpervaiz-dev/Employee-Management-Project',
       featuredBadge: 'React · Role-Based Workflow',
-      previewUi: (
-        <div className="w-full h-full p-4 sm:p-5 flex flex-col justify-between bg-gradient-to-br from-[#161618] to-[#09090b] text-cream">
-          {/* Mock Header */}
-          <div className="flex items-center justify-between pb-3 border-b border-cream/10">
-            <div className="flex items-center gap-1.5">
-              <span className="w-2.5 h-2.5 rounded-full bg-cream/20" />
-              <span className="w-2.5 h-2.5 rounded-full bg-cream/20" />
-              <span className="w-2.5 h-2.5 rounded-full bg-cream/20" />
-            </div>
-            <div className="flex items-center gap-1.5 px-3 py-1 rounded-md bg-white/[0.04] text-[11px] font-mono text-cream/60">
-              <ShieldCheck size={11} className="text-cream/80" />
-              <span>admin-portal / task-hub</span>
-            </div>
-          </div>
-
-          {/* Mock Tasks View */}
-          <div className="my-auto py-3 space-y-2 text-left">
-            <div className="flex items-center justify-between text-xs px-1">
-              <span className="font-mono text-[11px] text-cream/50">ACTIVE ASSIGNMENTS</span>
-              <span className="text-[10px] text-cream/70 bg-cream/10 px-2 py-0.5 rounded font-mono">
-                Admin Mode
-              </span>
-            </div>
-
-            <div className="p-2.5 rounded-lg bg-white/[0.03] border border-cream/10 flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <ListTodo size={14} className="text-cream/70" />
-                <div>
-                  <div className="text-xs font-medium text-cream">Responsive Nav Redesign</div>
-                  <div className="text-[10px] text-cream/50">Assigned: Alex M. · Due Today</div>
-                </div>
-              </div>
-              <span className="text-[10px] font-mono text-amber-300 bg-amber-950/40 px-2 py-0.5 rounded border border-amber-500/30">
-                In Progress
-              </span>
-            </div>
-
-            <div className="p-2.5 rounded-lg bg-white/[0.03] border border-cream/10 flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <CheckCircle2 size={14} className="text-emerald-400" />
-                <div>
-                  <div className="text-xs font-medium text-cream">Context API Error Boundary</div>
-                  <div className="text-[10px] text-cream/50">Assigned: Sarah K. · Verified</div>
-                </div>
-              </div>
-              <span className="text-[10px] font-mono text-emerald-300 bg-emerald-950/40 px-2 py-0.5 rounded border border-emerald-500/30">
-                Completed
-              </span>
-            </div>
-          </div>
-
-          {/* Mock Footer */}
-          <div className="flex items-center justify-between pt-2 border-t border-cream/10 text-[11px] font-mono text-cream/50">
-            <span className="flex items-center gap-1.5">
-              <Users size={12} /> Multi-user Roles
-            </span>
-            <span>Task Orchestration</span>
-          </div>
-        </div>
-      ),
+      img:'/images/EMS.png'
     },
     {
       title: 'Recipe Finder',
       category: 'Vanilla JavaScript Application',
       description:
-        'A JavaScript-based Recipe Finder application built to practice API data fetching and dynamically displaying recipe information. The project helped me understand how to retrieve data from an API and present it through an interactive user interface.',
+        'A JavaScript-based Recipe Finder application built to practice API data fetching and dynamically displaying recipe information. The project helped me understand how to retrieve data from an API and present it through an interactive user interface. To Test : Enter recipe item e.g: rice, chicken, chocolate etc.',
       tags: ['Vanilla JavaScript', 'Fetch API', 'DOM Manipulation', 'Async/Await', 'Responsive UI'],
       liveDemoUrl: 'https://nabeelpervaiz-dev.github.io/Recipe-Finder-/',
       githubUrl: 'https://github.com/nabeelpervaiz-dev/Recipe-Finder-',
       featuredBadge: 'Vanilla JS · API Driven',
-      previewUi: (
-        <div className="w-full h-full p-4 sm:p-5 flex flex-col justify-between bg-gradient-to-br from-[#18181b] to-[#0c0c0e] text-cream">
-          {/* Mock Browser Header */}
-          <div className="flex items-center justify-between pb-3 border-b border-cream/10">
-            <div className="flex items-center gap-1.5">
-              <span className="w-2.5 h-2.5 rounded-full bg-cream/20" />
-              <span className="w-2.5 h-2.5 rounded-full bg-cream/20" />
-              <span className="w-2.5 h-2.5 rounded-full bg-cream/20" />
-            </div>
-            <div className="flex items-center gap-1.5 px-3 py-1 rounded-md bg-white/[0.04] text-[11px] font-mono text-cream/60">
-              <Utensils size={11} className="text-cream/80" />
-              <span>recipe-finder.js</span>
-            </div>
-          </div>
-
-          {/* Mock App Content */}
-          <div className="my-auto py-3 space-y-3">
-            {/* Search Bar */}
-            <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/[0.05] border border-cream/15 text-xs text-cream/70">
-              <Search size={14} className="text-cream/40" />
-              <span>Search ingredients, cuisines, or dishes...</span>
-            </div>
-
-            {/* Recipe cards preview */}
-            <div className="grid grid-cols-2 gap-2 text-left">
-              <div className="p-2.5 rounded-lg bg-white/[0.03] border border-cream/10">
-                <div className="h-14 rounded bg-amber-950/30 border border-amber-500/20 mb-2 flex items-center justify-center text-[10px] font-mono text-amber-300">
-                  Mediterranean Bowl
-                </div>
-                <div className="text-[11px] font-medium text-cream truncate">Avocado Salad</div>
-                <div className="text-[10px] text-cream/50">20 mins · 4 Ingredients</div>
-              </div>
-
-              <div className="p-2.5 rounded-lg bg-white/[0.03] border border-cream/10">
-                <div className="h-14 rounded bg-emerald-950/30 border border-emerald-500/20 mb-2 flex items-center justify-center text-[10px] font-mono text-emerald-300">
-                  Quick Entree
-                </div>
-                <div className="text-[11px] font-medium text-cream truncate">Sesame Teriyaki</div>
-                <div className="text-[10px] text-cream/50">35 mins · Asian Fusion</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Mock Status */}
-          <div className="flex items-center justify-between pt-2 border-t border-cream/10 text-[11px] font-mono text-cream/50">
-            <span className="flex items-center gap-1 text-emerald-400">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-              API Connected
-            </span>
-            <span>Vanilla JS Fetch</span>
-          </div>
-        </div>
-      ),
+       img:'/images/res.jpeg'
+     
     },
+    {
+  title: 'Weather App',
+  category: 'React.js Application',
+  description:
+    'A responsive Weather Application built with React.js that fetches real-time weather information using the OpenWeather API and Axios. Users can search for a city to view its current weather conditions. This project helped me practice API integration, asynchronous data fetching, React state management, and conditional rendering.',
+  tags: [
+    'React.js',
+    'OpenWeather API',
+    'Axios',
+    'Async/Await',
+    'useState',
+    'useEffect',
+    'Tailwind CSS'
+  ],
+  liveDemoUrl: 'https://nabeelpervaiz-dev.github.io/OpenWeather/',
+  githubUrl: 'https://github.com/nabeelpervaiz-dev/OpenWeather',
+  featuredBadge: 'React · API Integration',
+   img:'/images/weather.jpeg'
+},
+{
+  title: 'Password Generator',
+  category: 'React.js Application',
+  description:
+    'A simple and interactive Password Generator built with React.js that generates random passwords based on user preferences. Developed to practice React hooks, component state management, and performance optimization using useEffect, useCallback, and useRef.',
+  tags: [
+    'React.js',
+    'useState',
+    'useEffect',
+    'useCallback',
+    'useRef',
+    'React Hooks',
+    'Tailwind CSS'
+  ],
+  liveDemoUrl: 'https://nabeelpervaiz-dev.github.io/Password-Generator/',
+  githubUrl: 'https://github.com/nabeelpervaiz-dev/Password-Generator',
+  featuredBadge: 'React · Hooks Practice',
+   img:'/images/passwordmin.jpeg'
+},
+{
+  title: 'BMI Calculator',
+  category: 'React.js Application',
+  description:
+    'A lightweight BMI Calculator built with React.js that calculates Body Mass Index based on user-provided height and weight. It displays the calculated BMI score along with a basic weight classification, helping users understand their BMI category. This project helped me practice React state management, event handling, and conditional rendering.',
+  tags: [
+    'React.js',
+    'JavaScript',
+    'useState',
+    'Event Handling',
+    'Conditional Rendering',
+    'Tailwind CSS'
+  ],
+  liveDemoUrl: 'https://nabeelpervaiz-dev.github.io/BMI-Calculator/',
+  githubUrl: 'https://github.com/nabeelpervaiz-dev/BMI-Calculator',
+  featuredBadge: 'React · Logic & State',
+   img:'/images/BMI.jpeg'
+},
   ];
 
   useEffect(() => {
@@ -236,8 +186,8 @@ export default function Projects() {
             ref={headlineRef}
             className="text-4xl sm:text-6xl font-light tracking-tight text-cream leading-[1.1]"
           >
-            Featured Works & <br />
-            <span className="font-normal italic">Interactive Applications</span>
+            Featured Works 
+           
           </h1>
           <p className="max-w-md text-sm sm:text-base text-cream/70 font-light leading-relaxed">
             Real-world software built with clean React principles, vanilla JavaScript, API data streams, and thoughtful user workflows.
@@ -252,13 +202,11 @@ export default function Projects() {
               className="project-card group relative rounded-2xl bg-[#111111] border border-cream/15 hover:border-cream/40 transition-all duration-300 overflow-hidden flex flex-col justify-between hover:-translate-y-1 hover:shadow-[0_15px_35px_rgba(0,0,0,0.6)]"
             >
               {/* Thumbnail / Visual UI Showcase */}
-              <div className="relative w-full aspect-[16/10] overflow-hidden border-b border-cream/10 bg-black">
-                {project.previewUi}
-                {project.featuredBadge && (
-                  <div className="absolute top-3 right-3 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md border border-cream/20 text-[10px] font-mono uppercase tracking-wider text-cream/90">
-                    {project.featuredBadge}
-                  </div>
-                )}
+              <div className="relative">
+               <img src={project.img} alt="" />
+               {/* <img src={`${import.meta.env.BASE_URL}${project.img}`} */}
+                 {/* alt={project.title}  /> */}
+        
               </div>
 
               {/* Card Body */}

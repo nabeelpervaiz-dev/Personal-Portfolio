@@ -77,7 +77,7 @@ export default function Header({ onNavigate }: HeaderProps) {
 
           {/* Navigation items */}
           <nav
-            className="flex flex-col gap-1 text-sm font-hn"
+            className="flex  gap-6 text-sm font-hn"
             aria-label="Main Navigation"
           >
             {navItems.map((item) => {
@@ -89,7 +89,7 @@ export default function Header({ onNavigate }: HeaderProps) {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`relative transition-all duration-300 flex items-center gap-1.5 ${
+                  className={`relative text-xl transition-all duration-300 flex items-center gap-1.5 ${
                     isActive
                       ? 'text-cream font-medium opacity-100'
                       : 'text-cream/60 hover:text-cream hover:opacity-100'

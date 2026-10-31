@@ -105,7 +105,7 @@ export default function Hero() {
         className="pointer-events-none absolute inset-x-0 top-[13vh] z-10 overflow-hidden sm:top-[11vh] lg:top-[10vh]"
         aria-hidden="true"
       >
-        <div className="marquee flex w-max whitespace-nowrap font-hn text-[15vh] leading-none text-cream select-none sm:text-[23vh] lg:text-[26vh] font-normal tracking-tight">
+        <div className="marquee flex w-max whitespace-nowrap font-hn text-[20vh] leading-none text-cream select-none sm:text-[23vh] lg:text-[26vh] font-normal tracking-tight">
           <span className="pr-[6vw]">Nabeel Pervaiz &mdash;&nbsp;</span>
           <span className="pr-[6vw]">Nabeel Pervaiz &mdash;&nbsp;</span>
         </div>
@@ -116,7 +116,7 @@ export default function Hero() {
         ref={portraitRef}
         className="pointer-events-none absolute inset-x-0 bottom-0 z-20 flex justify-center items-end"
       >
-        <div className="relative h-[87vh] sm:h-[80vh] w-auto max-w-[96vw] sm:max-w-2xl flex items-end justify-center">
+        <div className="relative h-[100vh] sm:h-[80vh] w-auto max-w-[96vw] sm:max-w-2xl flex items-end justify-center">
           <img
           src={`${import.meta.env.BASE_URL}assets/aistudio/removed_bg_image-Photoroom_16e9b35b.png`}
             alt="Nabeel Pervaiz"
@@ -133,7 +133,7 @@ export default function Hero() {
         {/* Animated Title: "Frontend Developer" with rounded slightly transparent background */}
         <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-cream/20 shadow-lg">
           <span className="w-2 h-2 rounded-full bg-cream animate-pulse shadow-[0_0_8px_rgba(239,238,233,0.8)]" />
-          <span className="text-xs sm:text-sm font-hn uppercase tracking-[0.25em] text-cream font-medium">
+          <span className="text-sm sm:text-lg font-hn uppercase tracking-[0.25em] text-cream font-medium">
             Frontend Developer
           </span>
         </div>
@@ -141,7 +141,7 @@ export default function Hero() {
         {/* Associated Projects Link */}
         <Link
           to="/project"
-          className="group inline-flex items-center gap-2 text-xs sm:text-sm font-hn uppercase tracking-widest text-cream/70 hover:text-cream transition-colors duration-300 py-1"
+          className="group inline-flex items-center gap-2 text-lg  sm:text-lg font-hn uppercase tracking-widest text-cream/70 hover:text-cream transition-colors duration-300 py-1"
         >
           <span>View Featured Projects</span>
           <ArrowRight
