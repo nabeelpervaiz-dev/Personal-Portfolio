@@ -13,7 +13,6 @@ interface SkillItem {
   name: string;
   category: string;
   description: string;
-  tags: string[];
   img: string; 
 }
 
@@ -31,7 +30,7 @@ export default function Skills() {
        img:'https://pngdownload.io/wp-content/uploads/2023/12/HTML5-Logo-PNG-Symbol-for-Web-Development-Transparent-jpg-768x806.webp',
       description:
         'Crafting semantic, accessible (WCAG AA), and search-engine optimized markup that forms robust document outlines.',
-      tags: ['HTML5', 'Semantic Tags', 'ARIA', 'SEO & OpenGraph', 'Web Standards'],
+  
     },
     {
       id: 'css',
@@ -40,7 +39,6 @@ export default function Skills() {
        img:'https://pngdownload.io/wp-content/uploads/2023/12/CSS-Logo-PNG-Symbol-for-Web-Development-Transparent-jpg-975x1024.webp',
       description:
         'Modern layout orchestration with Flexbox and CSS Grid, custom properties, responsive design, animations, and typography.',
-      tags: ['CSS3', 'Flexbox & Grid', 'Custom Properties', 'Responsive Design', 'Keyframes'],
 
     },
     {
@@ -50,7 +48,6 @@ export default function Skills() {
        img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlJiZlFwHkmOtwLwFSBvpMTZKDUGyVDzidEF9GkcrHhw&s=10',
       description:
         'Deep understanding of ES6+, DOM manipulation, asynchronous programming (Promises, async/await), and event loop mechanics.',
-      tags: ['ES6+', 'Async / Await', 'DOM API', 'Data Structures', 'Modules'],
     },
     {
       id: 'react',
@@ -59,7 +56,6 @@ export default function Skills() {
        img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCZHBHSBpt1CFUph03wiNAgd88F01UuszWvKP1lnD2jlIiS2pE-PHh57w&s=10',
       description:
         'Building high-performance component systems, custom hooks, predictable state management, and seamless SPA architectures.',
-      tags: ['React 19', 'Custom Hooks', 'Virtual DOM', 'Component Architecture', 'Performance'],
     },
     {
       id: 'tailwind',
@@ -68,7 +64,6 @@ export default function Skills() {
       img:'https://explore-feed.github.com/topics/tailwind/tailwind.png',
       description:
         'Rapid, consistent design system implementation with Tailwind v4, custom theme tokens, modern responsive prefixes, and transitions.',
-      tags: ['Tailwind v4', 'Design Tokens', 'Dark Theme', 'Responsive Grid', 'JIT Engine'],
      
     },
   ];
@@ -192,16 +187,6 @@ export default function Skills() {
               </div>
 
               {/* Tags */}
-              <div className="pt-4 border-t border-cream/10 flex flex-wrap gap-1.5">
-                {skill.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="text-[11px] font-mono text-cream/60 bg-white/[0.03] px-2.5 py-1 rounded-md border border-cream/10"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
             </div>
           ))}
         </div>
