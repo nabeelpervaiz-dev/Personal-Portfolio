@@ -30,7 +30,27 @@ export default function Projects() {
 
 
   const projects: Project[] = [
+    
+{
+  title: 'Todo App – CRUD Operations using Redux-Toolkit',
+  category: 'React Application Using Redux Toolkit',
+  description:
+    'A React-based Todo Application built to practice and strengthen my Redux Toolkit concepts. The project implements complete CRUD operations (Create, Read, Update, Delete) using Redux Toolkit. It focuses on understanding Redux architecture, store configuration, slices, reducers, actions, and the complete state management flow for handling tasks efficiently.',
+  tags: [
+    'React',
+    'Redux Toolkit',
+    'State Management',
+    'CRUD Operations',
+    'Redux Store',
+    'Tailwind CSS'
+  ],
+  liveDemoUrl: 'https://nabeelpervaiz-dev.github.io/Todo-CRUD-using-Redux-ToolKit/',
+  githubUrl: 'https://github.com/nabeelpervaiz-dev/Todo-CRUD-using-Redux-ToolKit',
+  featuredBadge: 'React · Redux Toolkit · CRUD',
+  img: '/images/TODO.jpg'
+},
     {
+
       title: 'Employee Task Management System',
       category: 'React Application',
       description:
