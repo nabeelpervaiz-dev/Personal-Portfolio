@@ -23,49 +23,97 @@ export default function Skills() {
   const lineRef = useRef<HTMLDivElement>(null);
 
   const skills: SkillItem[] = [
+    
     {
-      id: 'html',
-      name: 'HTML',
-      category: 'Markup & Structure',
-       img:'https://pngdownload.io/wp-content/uploads/2023/12/HTML5-Logo-PNG-Symbol-for-Web-Development-Transparent-jpg-768x806.webp',
-      description:
-        'Crafting semantic, accessible (WCAG AA), and search-engine optimized markup that forms robust document outlines.',
-  
-    },
+  id: 'html',
+  name: 'HTML5',
+  category: 'Web Fundamentals',
+  img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
+  description:
+    'Structuring accessible web pages using semantic HTML5 elements, forms, and modern document structure.',
+},
+{
+  id: 'css',
+  name: 'CSS3',
+  category: 'Web Fundamentals',
+  img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
+  description:
+    'Creating responsive and visually polished interfaces using Flexbox, Grid, animations, transitions, and modern CSS.',
+},
+{
+  id: 'javascript',
+  name: 'JavaScript',
+  category: 'Programming Language',
+  img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+  description:
+    'Building interactive web applications using ES6+, asynchronous JavaScript, DOM manipulation, and modern programming concepts.',
+},
+    
+   
+   {
+  id: 'react',
+  name: 'React',
+  category: 'Frontend Framework',
+  img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+  description:
+    'Building dynamic, component-based user interfaces using React, reusable components, props, hooks, state management, and modern frontend development practices.',
+},
     {
-      id: 'css',
-      name: 'CSS',
-      category: 'Styling & Layout',
-       img:'https://pngdownload.io/wp-content/uploads/2023/12/CSS-Logo-PNG-Symbol-for-Web-Development-Transparent-jpg-975x1024.webp',
-      description:
-        'Modern layout orchestration with Flexbox and CSS Grid, custom properties, responsive design, animations, and typography.',
-
-    },
+  id: 'tailwind',
+  name: 'Tailwind CSS',
+  category: 'CSS Framework',
+  img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg',
+  description:
+    'Building modern, responsive user interfaces using utility-first CSS, custom theme configurations, responsive breakpoints, and hover transitions.',
+},
     {
-      id: 'js',
-      name: 'JavaScript',
-      category: 'Core Logic & Scripting',
-       img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlJiZlFwHkmOtwLwFSBvpMTZKDUGyVDzidEF9GkcrHhw&s=10',
-      description:
-        'Deep understanding of ES6+, DOM manipulation, asynchronous programming (Promises, async/await), and event loop mechanics.',
-    },
-    {
-      id: 'react',
-      name: 'React',
-      category: 'UI Architecture',
-       img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCZHBHSBpt1CFUph03wiNAgd88F01UuszWvKP1lnD2jlIiS2pE-PHh57w&s=10',
-      description:
-        'Building high-performance component systems, custom hooks, predictable state management, and seamless SPA architectures.',
-    },
-    {
-      id: 'tailwind',
-      name: 'Tailwind CSS',
-      category: 'Utility-First Systems',
-      img:'https://explore-feed.github.com/topics/tailwind/tailwind.png',
-      description:
-        'Rapid, consistent design system implementation with Tailwind v4, custom theme tokens, modern responsive prefixes, and transitions.',
-     
-    },
+  id: 'redux-toolkit',
+  name: 'Redux Toolkit',
+  category: 'State Management',
+  img: 'https://raw.githubusercontent.com/reduxjs/redux/master/logo/logo.png',
+  description:
+    'Efficient global state management using Redux Toolkit, slices, reducers, actions, and centralized application state.',
+},
+{
+  id: 'git',
+  name: 'Git',
+  category: 'Version Control',
+  img: 'https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png',
+  description:
+    'Version control and source code management using commits, branches, merging, and repository tracking.',
+},
+{
+  id: 'github',
+  name: 'GitHub',
+  category: 'Development Workflow',
+  img: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png',
+  description:
+    'Code hosting, repository management, collaboration, and project deployment using GitHub Pages and Git-based workflows.',
+},
+{
+  id: 'react-router',
+  name: 'React Router DOM',
+  category: 'Routing & Navigation',
+  img: 'https://reactrouter.com/favicon-light.png',
+  description:
+    'Client-side routing, dynamic routes, nested layouts, navigation, and seamless page transitions in React applications.',
+},
+{
+  id: 'axios',
+  name: 'Axios',
+  category: 'API Integration',
+  img: 'https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/axios.svg',
+  description:
+    'Handling HTTP requests and API integration using Axios to fetch, send, and manage external data with asynchronous JavaScript in React applications.',
+},
+{
+  id: 'gsap',
+  name: 'GSAP',
+  category: 'Animation',
+  img: 'https://gsap.com/favicon.ico',
+  description:
+    'Creating smooth, interactive web animations using timelines, scroll-based effects, and advanced animation controls.',
+},
   ];
 
   useEffect(() => {

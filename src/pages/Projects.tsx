@@ -18,6 +18,7 @@ interface Project {
   githubUrl?: string;
   featuredBadge?: string;
   img:string;
+  dateAdded: string; // ISO date-time string
   // previewUi: React.ReactNode;
 }
 
@@ -44,10 +45,11 @@ export default function Projects() {
     'Redux Store',
     'Tailwind CSS'
   ],
+   dateAdded: 'November 5, 2026  ⌚',
   liveDemoUrl: 'https://nabeelpervaiz-dev.github.io/Todo-CRUD-using-Redux-ToolKit/',
   githubUrl: 'https://github.com/nabeelpervaiz-dev/Todo-CRUD-using-Redux-ToolKit',
   featuredBadge: 'React · Redux Toolkit · CRUD',
-  img: '/images/TODO.jpg'
+  img: '/images/todo.jpg'
 },
     {
 
@@ -56,10 +58,11 @@ export default function Projects() {
       description:
         'A React-based Employee Task Management System built to practice and strengthen my React concepts. The project focuses on    component-based architecture, props, state management, Context API, and task assignment workflows. Admin: admin1@me.com  & Employee:qaiser@me.com or diya@me.com and password is (123) for all using LocalStorage ',
       tags: ['React', 'Context API', 'State Management', 'Props Architecture', 'Tailwind CSS'],
+      dateAdded: 'september 29, 2026 ⌚',
       liveDemoUrl: 'https://nabeelpervaiz-dev.github.io/Employee-Management-Project/',
       githubUrl: 'https://github.com/nabeelpervaiz-dev/Employee-Management-Project',
       featuredBadge: 'React · Role-Based Workflow',
-      img:'/images/EMS.png'
+      img:'/images/Ems.jpg'
     },
     {
       title: 'Recipe Finder',
@@ -67,6 +70,7 @@ export default function Projects() {
       description:
         'A JavaScript-based Recipe Finder application built to practice API data fetching and dynamically displaying recipe information. The project helped me understand how to retrieve data from an API and present it through an interactive user interface. To Test : Enter recipe item e.g: rice, chicken, chocolate etc.',
       tags: ['Vanilla JavaScript', 'Fetch API', 'DOM Manipulation', 'Async/Await', 'Responsive UI'],
+  dateAdded: 'September 1, 2026  ⌚',
       liveDemoUrl: 'https://nabeelpervaiz-dev.github.io/Recipe-Finder-/',
       githubUrl: 'https://github.com/nabeelpervaiz-dev/Recipe-Finder-',
       featuredBadge: 'Vanilla JS · API Driven',
@@ -87,10 +91,11 @@ export default function Projects() {
     'useEffect',
     'Tailwind CSS'
   ],
+   dateAdded:'November 1 , 2026 ⌚',
   liveDemoUrl: 'https://nabeelpervaiz-dev.github.io/OpenWeather/',
   githubUrl: 'https://github.com/nabeelpervaiz-dev/OpenWeather',
   featuredBadge: 'React · API Integration',
-   img:'/images/weather.jpeg'
+   img:'/images/weather.jpg'
 },
 {
   title: 'Password Generator',
@@ -106,10 +111,11 @@ export default function Projects() {
     'React Hooks',
     'Tailwind CSS'
   ],
+   dateAdded: 'Nov 1 , 2026',
   liveDemoUrl: 'https://nabeelpervaiz-dev.github.io/Password-Generator/',
   githubUrl: 'https://github.com/nabeelpervaiz-dev/Password-Generator',
   featuredBadge: 'React · Hooks Practice',
-   img:'/images/passwordmin.jpeg'
+   img:'/images/password.jpg'
 },
 {
   title: 'BMI Calculator',
@@ -124,10 +130,11 @@ export default function Projects() {
     'Conditional Rendering',
     'Tailwind CSS'
   ],
+   dateAdded: 'Octuber 31, 2026',
   liveDemoUrl: 'https://nabeelpervaiz-dev.github.io/BMI-Calculator/',
   githubUrl: 'https://github.com/nabeelpervaiz-dev/BMI-Calculator',
   featuredBadge: 'React · Logic & State',
-   img:'/images/BMI.jpeg'
+   img:'/images/bmi.jpg'
 },
   ];
 
@@ -232,8 +239,9 @@ export default function Projects() {
               {/* Card Body */}
               <div className="p-6 sm:p-7 flex flex-col justify-between flex-1">
                 <div>
-                  <div className="text-[11px] font-mono uppercase tracking-widest text-cream/50 mb-2">
-                    {project.category}
+                  <div className="text-[12] sm:text-[15px] font-mono uppercase  text-cream/50 mb-2">
+                  <h1 className='tracking-wide'> {project.category}</h1>
+                   <h1 className='tracking-tight'>{project.dateAdded}</h1>
                   </div>
                   <h2 className="text-2xl font-medium tracking-tight text-cream mb-3">
                     {project.title}
@@ -241,6 +249,7 @@ export default function Projects() {
                   <p className="text-sm text-cream/70 font-light leading-relaxed mb-6">
                     {project.description}
                   </p>
+                  
                 </div>
 
                 {/* Tech Tags & Action Links */}
@@ -280,7 +289,10 @@ export default function Projects() {
                         <Github size={13} />
                         <span>Source Code</span>
                       </a>
+
+                      
                     )}
+
                   </div>
                 </div>
               </div>
