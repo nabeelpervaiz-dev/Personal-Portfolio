@@ -49,7 +49,7 @@ export default function Projects() {
   liveDemoUrl: 'https://nabeelpervaiz-dev.github.io/Todo-CRUD-using-Redux-ToolKit/',
   githubUrl: 'https://github.com/nabeelpervaiz-dev/Todo-CRUD-using-Redux-ToolKit',
   featuredBadge: 'React · Redux Toolkit · CRUD',
-  img: '/images/todo.jpg'
+  img: '/images/todolight.webp'
 },
     {
 

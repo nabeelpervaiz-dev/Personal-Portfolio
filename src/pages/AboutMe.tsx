@@ -163,7 +163,7 @@ const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${userEmail}&su
           <div ref={photoRef} className="lg:col-span-5">
             <div className="relative group overflow-hidden rounded-2xl border border-cream/20 bg-[#121212] aspect-[3/4] max-w-md mx-auto lg:max-w-none shadow-2xl">
               <img
-             src={`${import.meta.env.BASE_URL}assets/aistudio/removed_bg_image-Photoroom_16e9b35b.png`}
+             src={`${import.meta.env.BASE_URL}assets/aistudio/profile.webp`}
             alt="Nabeel Pervaiz"
                 
                 className="h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
